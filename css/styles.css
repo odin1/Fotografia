@@ -1,0 +1,257 @@
+body {
+	font-family: 'Dancing Script', cursive;
+	background: #02010a;	
+	display: flex;
+	flex-flow: row wrap;
+}
+
+header {
+	background: #5b7989;
+	color: white;
+	border-radius: 10px 10px 0px 0px;
+	width: 100%;
+}
+
+header h1 {
+	padding: 20px;		
+	text-shadow: 2px 2px 2px #02010a; 
+	float: left;	
+}
+
+header nav{
+	padding: 30px;
+	float: left;
+}
+
+header ul{
+	list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
+	
+}
+
+header ul li{
+	margin: 0 5px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+li a{
+	color: white;
+}
+
+a{
+	color: black;
+}
+
+/* Clase para la pagina actual */
+.sinSubrayado{
+	text-decoration: none;
+}
+
+img {
+	box-shadow: 2px 2px 2px #02010a;
+}
+
+footer{
+	border-radius: 0px 0px 10px 10px;
+	background: #C6D5C5;
+	color: #02010a; 
+}
+
+.icono{
+	box-shadow: none;
+	width: 5%;	
+}
+
+.contenido {	
+	margin: 0;
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	text-align: center;
+}
+
+.contenedor{
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+}
+
+/**  Imagenes */
+
+
+#imagenCentral{
+	background-color: #82c3a6;
+	
+}
+
+#imagenesSecundarias {
+	background-color: #d5c75f;
+	border: 1px;	
+}
+
+#galeria {
+	background-color: #d5c75f;
+	border: 1px;	
+	display: flex;
+	flex-flow: row wrap;
+}
+
+/* Inicio Efectos */
+#paisajes img:hover{
+	transform: rotate(10deg);
+	box-shadow: 2px 2px 2px #82c3a6;
+
+}
+
+#retratos img:hover{
+	transform: translate(20px, -5px);
+	box-shadow: 2px 2px 2px #82c3a6;
+}
+
+/* Fin Efectos */
+
+/** Fin Imagenes */
+
+
+/* Animacion Inicial */
+
+header {
+	animation-name: slidein;
+	animation-duration: 2s;  	
+}
+
+@-webkit-keyframes slidein{
+	0% {
+		margin-top: 150%;
+	}
+	  
+	60% {
+		margin-top: -5%;
+	}
+	
+	100% {
+		margin-top: 0%;
+	}
+}
+
+/* Fin Animacion Inicial */
+
+/* Efectos imagenes de galeria */
+#imagen1 img{
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+
+#imagen2 img, #imagen4 img, #imagen6 img{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+#imagen3 img{
+	-webkit-filter: sepia(90%);
+	filter: sepia(90%);
+}
+
+
+/* Fin Efectos imagenes de galeria */
+
+/*  Estilo para desktop */
+@media (min-width: 900px){
+
+	header h1{
+		width: 60%;
+		text-align: left;
+	}
+
+	header nav{
+		width: 30%;
+	}
+
+	header ul{
+		justify-content: flex-end;
+	}
+
+	#imagenCentral {
+		padding: 3%;
+	}
+	
+	#imagenCentral img{
+		width: 80%;
+	}
+
+	#imagenesSecundarias {
+		padding: 3% 0 0 0;
+	}
+
+
+	#paisajes, #retratos {
+		width: 50%;
+	}
+
+	#paisajes img, #retratos img {
+		width: 70%;
+	}	
+
+	#contacto, #terminos, #redesSociales, #derechos{
+		width: 25%;
+	}
+
+	/* Para la galeria */
+
+	.columna{		
+		width: 33.33%;
+	}
+
+	.columna img{
+		width: 70%;
+		margin: 10% 0 10% 0;
+	}
+
+}
+
+/* Estilo Para Moviles */
+
+@media (max-width: 900px){
+	
+	header h1, header nav{
+		text-align: center;
+		padding: 2%;
+		width: 100%;
+	}
+
+	header ul{
+		padding: 0;
+		justify-content: center;
+	}
+
+	footer{
+		padding: 2%;
+	}
+
+	img{
+		width: 80%;
+	}
+
+	#imagenCentral {
+		padding: 7% 0 7%;
+	}
+
+	#imagenesSecundarias {
+		padding: 7% 0 0 0;
+	}
+
+	#paisajes, #retratos {
+		width: 100%;
+	}
+
+	#contacto, #terminos, #redesSociales, #derechos{
+		width: 100%;
+	}
+
+	.columna{
+		padding: 7% 0 7% 0;
+	}
+
+}
